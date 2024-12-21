@@ -83,6 +83,41 @@
    `(agda2-highlight-inductive-constructor-face ((t (:foreground ,nekonight-storm-green))))
    `(agda2-highlight-number-face ((t (:foreground ,nekonight-storm-blue+1))))
 
+   ;; Identifiers and structs
+   `(font-lock-variable-name-face ((t (:foreground ,nekonight-storm-purple))))
+   `(font-lock-function-name-face ((t (:foreground ,nekonight-storm-blue))))
+   `(font-lock-constant-face ((t (:foreground ,nekonight-storm-orange))))
+   `(font-lock-keyword-face ((t (:foreground ,nekonight-storm-pink :bold t))))
+   `(font-lock-type-face ((t (:foreground ,nekonight-storm-cyan))))
+
+   ;; Literals and Strings
+   `(font-lock-string-face ((t (:foreground ,nekonight-storm-green))))
+   `(font-lock-number-face ((t (:foreground ,nekonight-storm-blue+1))))
+
+   ;; Comments
+   `(font-lock-comment-face ((t (:foreground ,nekonight-storm-niagara-1 :italic t))))
+   `(font-lock-comment-delimiter-face ((t (:foreground ,nekonight-storm-red))))
+
+   ;; Operators e Delimiters
+   `(font-lock-builtin-face ((t (:foreground ,nekonight-storm-orange))))
+   `(font-lock-delimiter-face ((t (:foreground ,nekonight-storm-fg+1))))
+
+   ;; Errors
+   `(flymake-error ((t (:underline (:style wave :color ,nekonight-storm-red)))))
+   `(flymake-warning ((t (:underline (:style wave :color ,nekonight-storm-orange)))))
+
+   ;; Lisp
+   `(lisp-function-name-face ((t (:foreground ,nekonight-storm-blue))))
+   `(lisp-macro-face ((t (:foreground ,nekonight-storm-purple :italic t))))
+
+   ;; Python
+   `(python-decorator-face ((t (:foreground ,nekonight-storm-orange :italic t))))
+
+   ;; JavaScript
+   `(js2-object-property-face ((t (:foreground ,nekonight-storm-purple))))
+   
+
+
    ;; AUCTeX
    `(font-latex-bold-face ((t (:foreground ,nekonight-storm-cyan :bold t))))
    `(font-latex-italic-face ((t (:foreground ,nekonight-storm-cyan :italic t))))

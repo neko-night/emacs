@@ -74,24 +74,58 @@
   (custom-theme-set-faces
    'nekonight-moon
 
-   ;; Agda2
-   `(agda2-highlight-datatype-face ((t (:foreground ,nekonight-moon-cyan))))
-   `(agda2-highlight-primitive-type-face ((t (:foreground ,nekonight-moon-cyan))))
-   `(agda2-highlight-function-face ((t (:foreground ,nekonight-moon-blue))))
-   `(agda2-highlight-keyword-face ((t ,(list :foreground nekonight-moon-pink
+  ;; Agda2
+  `(agda2-highlight-datatype-face ((t (:foreground ,nekonight-moon-cyan))))
+  `(agda2-highlight-primitive-type-face ((t (:foreground ,nekonight-moon-cyan))))
+  `(agda2-highlight-function-face ((t (:foreground ,nekonight-moon-blue))))
+  `(agda2-highlight-keyword-face ((t ,(list :foreground nekonight-moon-pink
                                              :bold t))))
-   `(agda2-highlight-inductive-constructor-face ((t (:foreground ,nekonight-moon-green))))
-   `(agda2-highlight-number-face ((t (:foreground ,nekonight-moon-wisteria))))
+  `(agda2-highlight-inductive-constructor-face ((t (:foreground ,nekonight-moon-green))))
+  `(agda2-highlight-number-face ((t (:foreground ,nekonight-moon-wisteria))))
+
+   
+  ;; Identifiers and structs
+  `(font-lock-variable-name-face ((t (:foreground ,nekonight-moon-purple))))
+  `(font-lock-function-name-face ((t (:foreground ,nekonight-moon-blue))))
+  `(font-lock-constant-face ((t (:foreground ,nekonight-moon-orange))))
+  `(font-lock-keyword-face ((t (:foreground ,nekonight-moon-pink :bold t))))
+  `(font-lock-type-face ((t (:foreground ,nekonight-moon-cyan))))
+
+  ;; Literals and Strings
+  `(font-lock-string-face ((t (:foreground ,nekonight-moon-green))))
+  `(font-lock-number-face ((t (:foreground ,nekonight-moon-wisteria))))
+
+  ;; Comments
+  `(font-lock-comment-face ((t (:foreground ,nekonight-moon-niagara-1 :italic t))))
+  `(font-lock-comment-delimiter-face ((t (:foreground ,nekonight-moon-red))))
+
+  ;; Operators e Delimiters
+  `(font-lock-builtin-face ((t (:foreground ,nekonight-moon-orange))))
+  `(font-lock-delimiter-face ((t (:foreground ,nekonight-moon-fg+1))))
+
+  ;; Errors
+  `(flymake-error ((t (:underline (:style wave :color ,nekonight-moon-red)))))
+  `(flymake-warning ((t (:underline (:style wave :color ,nekonight-moon-orange)))))
+
+  ;; Lisp
+  `(lisp-function-name-face ((t (:foreground ,nekonight-moon-blue))))
+  `(lisp-macro-face ((t (:foreground ,nekonight-moon-purple :italic t))))
+
+  ;; Python
+  `(python-decorator-face ((t (:foreground ,nekonight-moon-orange :italic t))))
+
+  ;; JavaScript
+  `(js2-object-property-face ((t (:foreground ,nekonight-moon-purple))))
 
    ;; AUCTeX
-   `(font-latex-bold-face ((t (:foreground ,nekonight-moon-cyan :bold t))))
-   `(font-latex-italic-face ((t (:foreground ,nekonight-moon-cyan :italic t))))
-   `(font-latex-math-face ((t (:foreground ,nekonight-moon-green))))
-   `(font-latex-sectioning-5-face ((t ,(list :foreground nekonight-moon-blue
+  `(font-latex-bold-face ((t (:foreground ,nekonight-moon-cyan :bold t))))
+  `(font-latex-italic-face ((t (:foreground ,nekonight-moon-cyan :italic t))))
+  `(font-latex-math-face ((t (:foreground ,nekonight-moon-green))))
+  `(font-latex-sectioning-5-face ((t ,(list :foreground nekonight-moon-blue
                                              :bold t))))
-   `(font-latex-slide-title-face ((t (:foreground ,nekonight-moon-blue))))
-   `(font-latex-string-face ((t (:foreground ,nekonight-moon-green))))
-   `(font-latex-warning-face ((t (:foreground ,nekonight-moon-red))))
+  `(font-latex-slide-title-face ((t (:foreground ,nekonight-moon-blue))))
+  `(font-latex-string-face ((t (:foreground ,nekonight-moon-green))))
+  `(font-latex-warning-face ((t (:foreground ,nekonight-moon-red))))
 
    ;; Basic Coloring (or Uncategorized)
    `(border ((t ,(list :background nekonight-moon-bg-1
