@@ -9,11 +9,15 @@ Looking for a theme that fits your vibe? Whether you're into dark mode, light mo
 <table width="100%">
   <tr>
     <th>Moon</th>
+    <th>Storm</th>
   </tr>
   <tr>
     <td width="50%">
       <img src="./img/neko-emacs-moon.jpg" />
     </td>
-    </tr>
+    <td width="50%">
+        <img src="./img/neko-emacs-storm.jpg">
+    </td>
+  </tr>
 </table>
   
