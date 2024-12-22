@@ -2,8 +2,6 @@
 
 ;; Package-Version: 0.0.3
 ;; Package-Requires: ((emacs "24.0"))
-;; Package-Keywords: themes
-;; Package-Description: A collection of themes with a "Neko Night" aesthetic.
 
 ;;; Commentary:
 ;; This package provides a collection of themes inspired by a "Neko Night" aesthetic.
