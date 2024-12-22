@@ -1,10 +1,10 @@
-;;; nekonight-moon-theme.el --- NekoNight, an all-around theme -*- lexical-binding: t -*-
+;;; nekonight-storm-theme.el --- NekoNight, an all-around theme -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2024 Bruno Ciccarino
 
 ;; Author: Bruno Ciccarino
 ;; URL: https://github.com/neko-night/emacs
-;; Keywords: faces, theme, nekonight, moon
+;; Keywords: faces, theme, nekonight, storm
 
 ;; Package-Version: 0.0.3
 ;; Package-Requires: ((emacs "24.0"))
@@ -66,6 +66,7 @@
       (nekonight-storm-niagara-1 "#565f73")
       (nekonight-storm-blue      "#0db9d7")
       (nekonight-storm-blue+1    "#3d59a1")
+      (nekonight-storm-teal      "#1abc9c")
       )
   (custom-theme-set-variables
    'nekonight-storm
@@ -82,6 +83,7 @@
                                              :bold t))))
    `(agda2-highlight-inductive-constructor-face ((t (:foreground ,nekonight-storm-green))))
    `(agda2-highlight-number-face ((t (:foreground ,nekonight-storm-blue+1))))
+   `(agda2-highlight-identifier-face ((t (:foreground ,nekonight-storm-teal))))
 
    ;; Identifiers and structs
    `(font-lock-variable-name-face ((t (:foreground ,nekonight-storm-purple))))
@@ -116,8 +118,6 @@
    ;; JavaScript
    `(js2-object-property-face ((t (:foreground ,nekonight-storm-purple))))
    
-
-
    ;; AUCTeX
    `(font-latex-bold-face ((t (:foreground ,nekonight-storm-cyan :bold t))))
    `(font-latex-italic-face ((t (:foreground ,nekonight-storm-cyan :italic t))))
@@ -213,7 +213,7 @@
    `(eshell-ls-directory ((t (:foreground ,nekonight-storm-blue))))
    `(eshell-ls-executable ((t (:foreground ,nekonight-storm-green))))
    `(eshell-ls-symlink ((t (:foreground ,nekonight-storm-pink))))
-
+   
    ;; Font Lock
    `(font-lock-builtin-face ((t (:foreground ,nekonight-storm-pink))))
    `(font-lock-comment-face ((t (:foreground ,nekonight-storm-orange))))
@@ -252,6 +252,20 @@
                    :background unspecified
                    :inherit unspecified))
       (t (:forground ,nekonight-storm-green :weight bold :underline t))))
+
+      ;; Autocomplete
+   `(ac-candidate-face ((t (:background ,nekonight-storm-bg+1 :foreground ,nekonight-storm-fg))))
+   `(ac-selection-face ((t (:background ,nekonight-storm-blue :foreground ,nekonight-storm-white :bold t))))
+   `(popup-tip-face ((t (:background ,nekonight-storm-green :foreground ,nekonight-storm-bg))))
+   `(popup-scroll-bar-foreground-face ((t (:background ,nekonight-storm-bg+3))))
+   `(popup-scroll-bar-background-face ((t (:background ,nekonight-storm-bg+1))))
+   `(popup-isearch-match ((t (:background ,nekonight-storm-pink :foreground ,nekonight-storm-black))))
+
+   ;; Vertico
+   `(vertico-current ((t (:background ,nekonight-storm-bg+2 :foreground ,nekonight-storm-white :bold t))))
+   `(vertico-multiline ((t (:foreground ,nekonight-storm-pink))))
+   `(vertico-group-title ((t (:foreground ,nekonight-storm-green :bold t))))
+   `(vertico-group-separator ((t (:foreground ,nekonight-storm-blue+1))))
 
    ;; Flyspell
    `(flyspell-incorrect
@@ -333,7 +347,7 @@
                           :background nekonight-storm-bg))))
    `(magit-blame-heading ((t ,(list :background nekonight-storm-bg+1
                                     :foreground nekonight-storm-fg))))
-
+  
    ;; Message
    `(message-header-name ((t (:foreground ,nekonight-storm-green))))
 

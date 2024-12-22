@@ -1,46 +1,5 @@
-;;; nekonight-moon-theme.el --- NekoNight, an all-around theme -*- lexical-binding: t -*-
-
-;; Copyright (C) 2024 Bruno Ciccarino
-
-;; Author: Bruno Ciccarino
-;; URL: https://github.com/neko-night/emacs
-;; Keywords: faces, theme, nekonight, moon
-
-;; Package-Version: 0.0.3
-;; Package-Requires: ((emacs "24.0"))
-
-;; SPDX-License-Identifier: MIT
-
-;; This file is not part of GNU Emacs.
-
-;; Permission is hereby granted, free of charge, to any person obtaining a copy
-;; of this software and associated documentation files (the "Software"), to deal
-;; in the Software without restriction, including without limitation the rights
-;; to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-;; copies of the Software, and to permit persons to whom the Software is
-;; furnished to do so, subject to the following conditions:
-
-;; The above copyright notice and this permission notice shall be included in all
-;; copies or substantial portions of the Software.
-
-;; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-;; IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-;; FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-;; AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-;; LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-;; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-;; SOFTWARE.
-
-;;; Commentary:
-
-;; Looking for a theme that fits your vibe? Whether you're into dark mode,
-;; light mode, or something in between, this NekoNight has got you covered.
-;; It's a buffet of color schemes for every taste and mood.
-
-;;; Code:
-
 (deftheme nekonight-moon
-  "Nekonight-Moon color theme for Emacs 24.")
+  "Nekonight-Moon color theme for Emacs 24")
 
 ;; Please, install rainbow-mode.
 ;; Colors with +x are lighter. Colors with -x are darker.
@@ -60,12 +19,13 @@
       (nekonight-moon-red+1     "#c53b53")
       (nekonight-moon-green     "#c3e88d")
       (nekonight-moon-pink      "#fca7ea")
-      (nekonight-moon-brown     "#cc8c3c")
+      (nekonight-moon-orange    "#ff9e64")
       (nekonight-moon-cyan      "#86e1fc")
       (nekonight-moon-purple    "#c099ff")
       (nekonight-moon-niagara-1 "#565f73")
       (nekonight-moon-blue      "#82aaff")
       (nekonight-moon-wisteria  "#9e95c7")
+      (nekonight-storm-teal      "#1abc9c")
       )
   (custom-theme-set-variables
    'nekonight-moon
@@ -74,58 +34,59 @@
   (custom-theme-set-faces
    'nekonight-moon
 
-  ;; Agda2
-  `(agda2-highlight-datatype-face ((t (:foreground ,nekonight-moon-cyan))))
-  `(agda2-highlight-primitive-type-face ((t (:foreground ,nekonight-moon-cyan))))
-  `(agda2-highlight-function-face ((t (:foreground ,nekonight-moon-blue))))
-  `(agda2-highlight-keyword-face ((t ,(list :foreground nekonight-moon-pink
+   ;; Agda2
+   `(agda2-highlight-datatype-face ((t (:foreground ,nekonight-moon-cyan))))
+   `(agda2-highlight-primitive-type-face ((t (:foreground ,nekonight-moon-cyan))))
+   `(agda2-highlight-function-face ((t (:foreground ,nekonight-moon-blue))))
+   `(agda2-highlight-keyword-face ((t ,(list :foreground nekonight-moon-pink
                                              :bold t))))
-  `(agda2-highlight-inductive-constructor-face ((t (:foreground ,nekonight-moon-green))))
-  `(agda2-highlight-number-face ((t (:foreground ,nekonight-moon-wisteria))))
+   `(agda2-highlight-inductive-constructor-face ((t (:foreground ,nekonight-moon-green))))
+   `(agda2-highlight-number-face ((t (:foreground ,nekonight-moon-wisteria))))
+   `(agda2-highlight-identifier-face ((t (:foreground ,nekonight-storm-teal))))
 
-   
   ;; Identifiers and structs
-  `(font-lock-variable-name-face ((t (:foreground ,nekonight-moon-purple))))
-  `(font-lock-function-name-face ((t (:foreground ,nekonight-moon-blue))))
-  `(font-lock-constant-face ((t (:foreground ,nekonight-moon-orange))))
-  `(font-lock-keyword-face ((t (:foreground ,nekonight-moon-pink :bold t))))
-  `(font-lock-type-face ((t (:foreground ,nekonight-moon-cyan))))
+ `(font-lock-variable-name-face ((t (:foreground ,nekonight-moon-purple))))
+ `(font-lock-function-name-face ((t (:foreground ,nekonight-moon-blue))))
+ `(font-lock-constant-face ((t (:foreground ,nekonight-moon-orange))))
+ `(font-lock-keyword-face ((t (:foreground ,nekonight-moon-pink :bold t))))
+ `(font-lock-type-face ((t (:foreground ,nekonight-moon-cyan))))
 
-  ;; Literals and Strings
-  `(font-lock-string-face ((t (:foreground ,nekonight-moon-green))))
-  `(font-lock-number-face ((t (:foreground ,nekonight-moon-wisteria))))
+ ;; Literals and Strings
+ `(font-lock-string-face ((t (:foreground ,nekonight-moon-green))))
+ `(font-lock-number-face ((t (:foreground ,nekonight-moon-wisteria))))
 
-  ;; Comments
-  `(font-lock-comment-face ((t (:foreground ,nekonight-moon-niagara-1 :italic t))))
-  `(font-lock-comment-delimiter-face ((t (:foreground ,nekonight-moon-red))))
+ ;; Comments
+ `(font-lock-comment-face ((t (:foreground ,nekonight-moon-niagara-1 :italic t))))
+ `(font-lock-comment-delimiter-face ((t (:foreground ,nekonight-moon-red))))
 
-  ;; Operators e Delimiters
-  `(font-lock-builtin-face ((t (:foreground ,nekonight-moon-orange))))
-  `(font-lock-delimiter-face ((t (:foreground ,nekonight-moon-fg+1))))
+ ;; Operators e Delimiters
+ `(font-lock-builtin-face ((t (:foreground ,nekonight-moon-orange))))
+ `(font-lock-delimiter-face ((t (:foreground ,nekonight-moon-fg+1))))
 
-  ;; Errors
-  `(flymake-error ((t (:underline (:style wave :color ,nekonight-moon-red)))))
-  `(flymake-warning ((t (:underline (:style wave :color ,nekonight-moon-orange)))))
+ ;; Errors
+ `(flymake-error ((t (:underline (:style wave :color ,nekonight-moon-red)))))
+ `(flymake-warning ((t (:underline (:style wave :color ,nekonight-moon-orange)))))
 
-  ;; Lisp
-  `(lisp-function-name-face ((t (:foreground ,nekonight-moon-blue))))
-  `(lisp-macro-face ((t (:foreground ,nekonight-moon-purple :italic t))))
+ ;; Lisp
+ `(lisp-function-name-face ((t (:foreground ,nekonight-moon-blue))))
+ `(lisp-macro-face ((t (:foreground ,nekonight-moon-purple :italic t))))
 
-  ;; Python
-  `(python-decorator-face ((t (:foreground ,nekonight-moon-orange :italic t))))
+ ;; Python
+ `(python-decorator-face ((t (:foreground ,nekonight-moon-orange :italic t))))
 
-  ;; JavaScript
-  `(js2-object-property-face ((t (:foreground ,nekonight-moon-purple))))
+ ;; JavaScript
+ `(js2-object-property-face ((t (:foreground ,nekonight-moon-purple))))
 
-   ;; AUCTeX
-  `(font-latex-bold-face ((t (:foreground ,nekonight-moon-cyan :bold t))))
-  `(font-latex-italic-face ((t (:foreground ,nekonight-moon-cyan :italic t))))
-  `(font-latex-math-face ((t (:foreground ,nekonight-moon-green))))
-  `(font-latex-sectioning-5-face ((t ,(list :foreground nekonight-moon-blue
+
+ )  ;; AUCTeX
+   `(font-latex-bold-face ((t (:foreground ,nekonight-moon-cyan :bold t))))
+   `(font-latex-italic-face ((t (:foreground ,nekonight-moon-cyan :italic t))))
+   `(font-latex-math-face ((t (:foreground ,nekonight-moon-green))))
+   `(font-latex-sectioning-5-face ((t ,(list :foreground nekonight-moon-blue
                                              :bold t))))
-  `(font-latex-slide-title-face ((t (:foreground ,nekonight-moon-blue))))
-  `(font-latex-string-face ((t (:foreground ,nekonight-moon-green))))
-  `(font-latex-warning-face ((t (:foreground ,nekonight-moon-red))))
+   `(font-latex-slide-title-face ((t (:foreground ,nekonight-moon-blue))))
+   `(font-latex-string-face ((t (:foreground ,nekonight-moon-green))))
+   `(font-latex-warning-face ((t (:foreground ,nekonight-moon-red))))
 
    ;; Basic Coloring (or Uncategorized)
    `(border ((t ,(list :background nekonight-moon-bg-1
@@ -155,7 +116,7 @@
    ;; Compilation
    `(compilation-info ((t ,(list :foreground nekonight-moon-green
                                  :inherit 'unspecified))))
-   `(compilation-warning ((t ,(list :foreground nekonight-moon-brown
+   `(compilation-warning ((t ,(list :foreground nekonight-moon-orange
                                     :bold t
                                     :inherit 'unspecified))))
    `(compilation-error ((t (:foreground ,nekonight-moon-red+1))))
@@ -215,8 +176,8 @@
 
    ;; Font Lock
    `(font-lock-builtin-face ((t (:foreground ,nekonight-moon-pink))))
-   `(font-lock-comment-face ((t (:foreground ,nekonight-moon-brown))))
-   `(font-lock-comment-delimiter-face ((t (:foreground ,nekonight-moon-brown))))
+   `(font-lock-comment-face ((t (:foreground ,nekonight-moon-orange))))
+   `(font-lock-comment-delimiter-face ((t (:foreground ,nekonight-moon-orange))))
    `(font-lock-constant-face ((t (:foreground ,nekonight-moon-cyan))))
    `(font-lock-doc-face ((t (:foreground ,nekonight-moon-green))))
    `(font-lock-doc-string-face ((t (:foreground ,nekonight-moon-green))))
@@ -283,7 +244,7 @@
 
    ;; Ido
    `(ido-first-match ((t (:foreground ,nekonight-moon-pink :bold nil))))
-   `(ido-only-match ((t (:foreground ,nekonight-moon-brown :weight bold))))
+   `(ido-only-match ((t (:foreground ,nekonight-moon-orange :weight bold))))
    `(ido-subdir ((t (:foreground ,nekonight-moon-blue :weight bold))))
 
    ;; Info
@@ -304,6 +265,19 @@
    `(highlight ((t (:background ,nekonight-moon-bg+1 :foreground nil))))
    `(highlight-current-line-face ((t ,(list :background nekonight-moon-bg+1
                                             :foreground nil))))
+   ;; Autocomplete
+   `(ac-candidate-face ((t (:background ,nekonight-moon-bg+1 :foreground ,nekonight-moon-fg))))
+   `(ac-selection-face ((t (:background ,nekonight-moon-blue :foreground ,nekonight-moon-white :bold t))))
+   `(popup-tip-face ((t (:background ,nekonight-moon-green :foreground ,nekonight-moon-bg))))
+   `(popup-scroll-bar-foreground-face ((t (:background ,nekonight-moon-bg+3))))
+   `(popup-scroll-bar-background-face ((t (:background ,nekonight-moon-bg+1))))
+   `(popup-isearch-match ((t (:background ,nekonight-moon-pink :foreground ,nekonight-moon-black))))
+
+   ;; Vertico
+   `(vertico-current ((t (:background ,nekonight-moon-bg+2 :foreground ,nekonight-moon-white :bold t))))
+   `(vertico-multiline ((t (:foreground ,nekonight-moon-pink))))
+   `(vertico-group-title ((t (:foreground ,nekonight-moon-green :bold t))))
+   `(vertico-group-separator ((t (:foreground ,nekonight-moon-wisteria))))
 
    ;; line numbers
    `(line-number ((t (:inherit default :foreground ,nekonight-moon-bg+4))))
@@ -318,7 +292,7 @@
    `(magit-diff-hunk-header ((t (:background ,nekonight-moon-bg+2))))
    `(magit-diff-file-header ((t (:background ,nekonight-moon-bg+4))))
    `(magit-log-sha1 ((t (:foreground ,nekonight-moon-red+1))))
-   `(magit-log-author ((t (:foreground ,nekonight-moon-brown))))
+   `(magit-log-author ((t (:foreground ,nekonight-moon-orange))))
    `(magit-log-head-label-remote ((t ,(list :foreground nekonight-moon-green
                                             :background nekonight-moon-bg+1))))
    `(magit-log-head-label-local ((t ,(list :foreground nekonight-moon-blue
@@ -407,8 +381,8 @@
                                        :foreground nekonight-moon-red))))
    `(whitespace-space-after-tab ((t ,(list :background nekonight-moon-pink
                                            :foreground nekonight-moon-pink))))
-   `(whitespace-space-before-tab ((t ,(list :background nekonight-moon-brown
-                                            :foreground nekonight-moon-brown))))
+   `(whitespace-space-before-tab ((t ,(list :background nekonight-moon-orange
+                                            :foreground nekonight-moon-orange))))
 
    ;; tab-bar
    `(tab-bar ((t (:background ,nekonight-moon-bg+1 :foreground ,nekonight-moon-bg+4))))
@@ -427,8 +401,8 @@
 
    ;; company-mode
    `(company-tooltip ((t (:foreground ,nekonight-moon-fg :background ,nekonight-moon-bg+1))))
-   `(company-tooltip-annotation ((t (:foreground ,nekonight-moon-brown :background ,nekonight-moon-bg+1))))
-   `(company-tooltip-annotation-selection ((t (:foreground ,nekonight-moon-brown :background ,nekonight-moon-bg-1))))
+   `(company-tooltip-annotation ((t (:foreground ,nekonight-moon-orange :background ,nekonight-moon-bg+1))))
+   `(company-tooltip-annotation-selection ((t (:foreground ,nekonight-moon-orange :background ,nekonight-moon-bg-1))))
    `(company-tooltip-selection ((t (:foreground ,nekonight-moon-fg :background ,nekonight-moon-bg-1))))
    `(company-tooltip-mouse ((t (:background ,nekonight-moon-bg-1))))
    `(company-tooltip-common ((t (:foreground ,nekonight-moon-green))))
@@ -444,7 +418,7 @@
    ;; Orderless
    `(orderless-match-face-0 ((t (:foreground ,nekonight-moon-pink))))
    `(orderless-match-face-1 ((t (:foreground ,nekonight-moon-green))))
-   `(orderless-match-face-2 ((t (:foreground ,nekonight-moon-brown))))
+   `(orderless-match-face-2 ((t (:foreground ,nekonight-moon-orange))))
    `(orderless-match-face-3 ((t (:foreground ,nekonight-moon-cyan))))
    ))
 
