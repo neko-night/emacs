@@ -3,7 +3,7 @@
 ;; Copyright (C) 2024 Bruno Ciccarino
 
 ;; Author: Bruno Ciccarino
-;; URL: https://github.com/BrunoCiccarino/nekonight
+;; URL: https://github.com/neko-night/emacs
 ;; Keywords: faces, theme, nekonight, moon
 
 ;; Package-Version: 0.0.3
