@@ -1,12 +1,7 @@
-;;; nekonight-themes.el --- Neko Night Themes -*- lexical-binding: t; -*-
+;;; nekonight-themes.el --- Neko Night Themes 
 
 ;; Package-Version: 0.0.3
 ;; Package-Requires: ((emacs "24.0"))
-
-;;; Commentary:
-;; This package provides a collection of themes inspired by a "Neko Night" aesthetic.
-;; To use these themes, load the package and then activate one of the provided themes
-;; using `M-x load-theme`.
 
 ;;; Code:
 (defgroup nekonight nil
